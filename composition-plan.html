@@ -295,6 +295,41 @@
                             paragraphs to confirm the text clears the float and returns to full width. 
                         </td>
                     </tr>
+
+                    <tr>
+                        <th sope="row">
+                            Rounded surfaces
+                            <code>.stroy-guide</code>,
+                            <code>.feature-figure</code>,
+                            <code>.pull-quote</code>,
+                            <code>.shape-record</code>
+                        </th>
+
+                        <td>
+                            Softer corners group the panels and set them apart from body text. The 50% radius is what makes the record read as a disc.
+                        </td>
+
+                        <td>
+                            With no styling every box has square corners and reads exactly the same.
+                        </td>
+                        
+                        <td>
+                            I will use <code>--radius-sm</code> and <code>--radius-md</code> tokens so the rounding matches the rest of my system instead of being 
+                            one-off values.
+                        </td>
+
+                        <td>
+                            Rounding doesn't position anything or create a stacking context. I'm not using <code>overflow:hidden</code>, so nothing gets clipped.
+                        </td>
+                        
+                        <td>
+                            If <code>border-radius</code> isn't supported, the corners are square and the content is identical.
+                        </td>
+
+                        <td>
+                            I will check the focus rings follow the rounded corners and stay visible, and that no text gets cut off at 200% zoom.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             </div>
