@@ -162,6 +162,38 @@
                             I will scroll top to bottom at 1280px. It should stick at the start, stop at the end of the article, and never cover the 
                             documentaion. I will click and tab through ever link and inspect the stacking context in DevTools.
                         </td>
+
+                    <tr>
+                        <th scope="row">
+                            <code>.feature-figure img</code>
+                        </th>
+
+                        <td>
+                            An original illustration of a Fillmore club street at night that sets the mood. The caption holds the credit.
+                        </td>
+
+                        <td>
+                            With no styling it's a plain rectangle image with the caption below it.
+                        </td>
+
+                        <td>
+                            I will use <code>clip-path:polygon()</code> to angle the corners like a torn gig poster. I will keep the important parts
+                            of the illustration away from the edges so nothing meaningful gets cut off. 
+                        </td>
+
+                        <td>
+                            The clip uses the image's own border box. <code>clip-path</code> will make a stacking context on the image only, so it won't
+                            a z-index.
+                        </td>
+
+                        <td>
+                            I will wrap it in <code>@supports</code>, so browsers without support show the full rectangle. The caption sits outside the
+                            clipped image, so it never gets cut.
+                        </td>
+
+                        <td>
+                            I will turn <code>clip-path</code> off in DevTools and forim the image and caption are still complete. I will also inspect the stacking cocntext.
+                        </td>
                     </tr>
                 </tbody>
             </table>
