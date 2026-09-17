@@ -201,3 +201,31 @@ article section {
         margin-block-start: 0;
     }
 }
+
+
+/* === SKIP LINK AND FOCUS ===*/
+.skip-link {
+    position: absolute;
+    inset-block-start: var(--space-2xs);
+    inset-inline-start: var(--space-2xs);
+    z-index: var(--layer-overlay);
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-action);
+    font-weight: var(--weight-bold);
+    transform: translateY(-200%)
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+}
+
+:focus-visible {
+    outline: 0.2rem solid var(--color-focus);
+    outline-offset: 0.2rem;
+}
+
+.feature-header:focus-visible {
+    outline-color: var(--color-surface);
+}
