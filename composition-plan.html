@@ -228,6 +228,39 @@
                             and inspect the stacking context.
                         </td>
                     </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <code>.pull-quote::before</code>
+                        </th>
+
+                        <td>
+                            A big decorative quotation mark behind the quote text. It's a decoration only, so no information lives in it. 
+                        </td>
+
+                        <td>
+                            It doesn't render at all without CSS, which is fine since it's decorative.
+                        </td>
+
+                        <td>
+                            I will place it with <code>position:absolute</code> behind the text and set <code>pointer-events:none</code> so 
+                            it can never block clicks on the source link. I will use an empty alt string in <code>content</code> so screen readers skip it.
+                        </td>
+
+                        <td>
+                            <code>.pullquote</code> is both its containing block and its stacking context. <code>z-index:-1</code> will paint it above the quote's
+                            background but under the quote's text.
+                        </td>
+
+                        <td>
+                            If it doesn't render, nothing is lost. The quote and the link still work on their own.
+                        </td>
+
+                        <td>
+                            I will click the source link right where the glyph sits to prove <code>pointer-events:none</code> works, and check
+                            the accessibility tree to confirm the glyph isn't announced.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             </div>
