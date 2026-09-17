@@ -195,6 +195,39 @@
                             I will turn <code>clip-path</code> off in DevTools and forim the image and caption are still complete. I will also inspect the stacking cocntext.
                         </td>
                     </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <code>.pull-quote</code>
+                        </th>
+
+                        <td>
+                            Pulls out  quote about the Fillmore scene, wiht the source credited and linked.
+                        </td>
+
+                        <td>
+                            With no styling it's a normal blockqyote under the figure.
+                        </td>
+
+                        <td>
+                            I will pull it up with a negative <code>maring-block-start</code> so it overlaps into an empty padding band at the bottom
+                            of the figure. It only coverst empty space, and it stays inside the article column. 
+                        </td>
+
+                        <td>
+                            It sits in normal flow inside <code>article</code>. I will add <code>position:relative</code> and <code>z-index:var(--layer-raised)</code>
+                            , which makes a stacking context that the decorative glyph can anchor to.
+                        </td>
+
+                        <td>
+                            Under 52 rem I will frop the negaitve margin so it sits in normal flow with no overlap. 
+                        </td>
+
+                        <td>
+                            At 1280px I will confirm the caption is fully visible above the quote. I will double the paragraphs to check growth, click the source link,
+                            and inspect the stacking context.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             </div>
