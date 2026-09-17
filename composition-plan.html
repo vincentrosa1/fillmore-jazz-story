@@ -13,10 +13,23 @@
                 padding:1rem;
                 color:#191919;
                 }
+
+                .table-wrap {
+                    overflow-x: auto;
+                }
+
             table{
                 width:100%;
+                min-width: 60rem;
                 border-collapse:collapse;
                 }
+
+                caption {
+                    padding-block: 0.6rem;
+                    text-align: left;
+                    font-weight: 700;
+                }
+
             th,td{
                 padding:.6rem;
                 border:1px solid #999;
@@ -39,7 +52,11 @@
                 Decorative layers use a local <code>-1</code> inside their parent's stacking content.
             
             </p>
+            <div class="table-wrap">
             <table>
+                <caption>
+                    One row per positioned, layered, clipped, rounded, or shape-wrapped element. 
+                </caption>
                 <thead>
                     <tr>
                         <th>Element</th>
@@ -63,5 +80,6 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </body>
         </html>
