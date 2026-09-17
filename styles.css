@@ -126,3 +126,32 @@ blockquote footer {
 
 a { color: var(--color-action); }
 a:hover { color: var(--color-action-strong); }
+
+
+/* === LAYOUT ===*/
+main {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding: var(--space-sm);
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.story-layout { 
+    display: grid;
+    gap: var(--space-lg);
+}
+
+article { min-width: 0; }
+
+article section {
+    display: flow-root;
+    margin-block-end: var(--space-xl);
+    scroll-margin-block-start: var(--space-lg);
+}
+
+@media (min-width: 52rem) {
+    .story-layou {
+        grid-template-columns: 14rem 1fr;
+    }
+}
