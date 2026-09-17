@@ -70,13 +70,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <th scope="row">
+                            <code>.skip-link</code>
+                        </th>
+                        
+                        <td>Keyboard users can skip past the header and story guide straight to the article. </td>
+                        
+                        <td>It's the first link on the page, so with no styling it just shows up as a normal link at the top.</td>
+                        
+                        <td>I will use <code>position:absolute</code> to keep it off-screen until it 
+                            gets <code>:focus-visible</code>, then it will show at the top-left. 
+                            Because it's absolute, showing it doesn't push anything else around.
+                        </td>
+                        
+                        <td>No positioned parent, so it uses the initial containing block. I will give it 
+                            <code>z-index:var(--layer-overlay)</code>, which is the top layer. Tha makes its own stacking
+                            context and keeps the sticky guide from covering it. 
+                        </td>              
+                        
+                        <td>With CSS turned off it's still a visible link at the top of the page. </td>
+                        
+                        <td>Tabbing in from the address bar at 320px, 1280px and 200% zoom. The link should show up, 
+                            not be covered, and move focus to the article.
+                        </td>
                     </tr>
                 </tbody>
             </table>
