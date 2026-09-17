@@ -49,7 +49,7 @@
                 <code>--layer-raised: 10</code>,
                 <code>--layer-sticky: 20</code>,
                 <code>--layer-overlay: 30</code>.
-                Decorative layers use a local <code>-1</code> inside their parent's stacking content.
+                Decorative layers use a local <code>-1</code> inside their parent's stacking context.
             
             </p>
             <div class="table-wrap">
@@ -59,13 +59,13 @@
                 </caption>
                 <thead>
                     <tr>
-                        <th>Element</th>
-                        <th>Content purpose</th>
-                        <th>Normal-flow baseline</th>
-                        <th>Chosen technique and why</th>
-                        <th>Containing block / stacking context</th>
-                        <th>Fallback or disengagement</th>
-                        <th>Required test</th>
+                        <th scope="col">Element</th>
+                        <th scope="col">Content purpose</th>
+                        <th scope="col">Normal-flow baseline</th>
+                        <th scope="col">Chosen technique and why</th>
+                        <th scope="col">Containing block / stacking context</th>
+                        <th scope="col">Fallback or disengagement</th>
+                        <th scope="col">Required test</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,7 +84,7 @@
                         </td>
                         
                         <td>No positioned parent, so it uses the initial containing block. I will give it 
-                            <code>z-index:var(--layer-overlay)</code>, which is the top layer. Tha makes its own stacking
+                            <code>z-index:var(--layer-overlay)</code>, which is the top layer. That makes its own stacking
                             context and keeps the sticky guide from covering it. 
                         </td>              
                         
