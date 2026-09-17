@@ -144,12 +144,12 @@
                         </td>
 
                         <td>
-                            I will use <code>position:sticky</code> with <code>inset-block-star:var(--space-sm)</code> in the first grid column,
-                             plus<code>align-self:start</code> so it has room to travel. I'm picking sticky over fixed so it can't leave its section. 
+                            I will use <code>position:sticky</code> with <code>inset-block-start:var(--space-sm)</code> in the first grid column,
+                             plus <code>align-self:start</code> so it has room to travel. I'm picking sticky over fixed so it can't leave its section. 
                         </td>
 
                         <td>
-                            I will wrap the guide and article in <code>.story-layout</code> so the guide stops when the artcle ends and never slides
+                            I will wrap the guide and article in <code>.story-layout</code> so the guide stops when the article ends and never slides
                             over the documentation section. <code>z-index:var(--layer-sticky)</code> will give it its own stacking context.
                         </td>
 
@@ -162,6 +162,7 @@
                             I will scroll top to bottom at 1280px. It should stick at the start, stop at the end of the article, and never cover the 
                             documentaion. I will click and tab through ever link and inspect the stacking context in DevTools.
                         </td>
+                    </tr>
 
                     <tr>
                         <th scope="row">
@@ -179,7 +180,7 @@
 
                         <td>
                             I will use <code>clip-path:polygon()</code> to angle the corners like a torn gig poster. The trim is presentational: no more than about
-                            4% off any corner, and only sky and pavenement, never a building, sign, or person. The photo file itself is unaltered.
+                            4% off any corner, and only sky and pavement, never a building, sign, or person. The photo file itself is unaltered.
                         </td>
 
                         <td>
@@ -203,15 +204,15 @@
                         </th>
 
                         <td>
-                            Pulls out  quote about the Fillmore scene, wiht the source credited and linked.
+                            Pulls out a quote about the Fillmore scene, wiht the source credited and linked.
                         </td>
 
                         <td>
-                            With no styling it's a normal blockqyote under the figure.
+                            With no styling it's a normal blockquote under the figure.
                         </td>
 
                         <td>
-                            I will pull it up with a negative <code>maring-block-start</code> so it overlaps into an empty padding band at the bottom
+                            I will pull it up with a negative <code>margin-block-start</code> so it overlaps into an empty padding band at the bottom
                             of the figure. It only coverst empty space, and it stays inside the article column. 
                         </td>
 
@@ -221,7 +222,7 @@
                         </td>
 
                         <td>
-                            Under 52 rem I will frop the negaitve margin so it sits in normal flow with no overlap. 
+                            Under 52 rem I will drop the negaitve margin so it sits in normal flow with no overlap. 
                         </td>
 
                         <td>
@@ -249,7 +250,7 @@
                         </td>
 
                         <td>
-                            <code>.pullquote</code> is both its containing block and its stacking context. <code>z-index:-1</code> will paint it above the quote's
+                            <code>.pull-quote</code> is both its containing block and its stacking context. <code>z-index:-1</code> will paint it above the quote's
                             background but under the quote's text.
                         </td>
 
@@ -269,7 +270,8 @@
                         </th>
 
                         <td>
-                            An original vinyl record illustration next to the legacy section, with the text wrapping around it. 
+                            A decorative vinyl record graphic beside the legacy section. It's decoration, not documentation,
+                            so it makes no historical claim and needs no photo credit. 
                         </td>
 
                         <td>
@@ -277,12 +279,13 @@
                         </td>
 
                         <td>
-                            I will use <code>shape-outside:circle(50%)</code> with <code>shape-margin</code> so the text follows the record's actual 
-                            round edge instead of a square box. The image really is a circle, so the shape matches the content. 
+                            An inline SVG, so it can use my color tokens. I will use <code>float:inline-start</code> with
+                            <code>shape-outside:circle(50%)</code> and <code>shape-margin</code> so the text follows the record's actual round
+                            edge instead of a square box. The graphic really is a circle, so the shape matches the content.  
                         </td>
 
                         <td>
-                            It floats inside its section, and the section uses <code>disply:flow-root</code> to contain the float. No stacking context
+                            It floats inside its section, and the section uses <code>display:flow-root</code> to contain the float. No stacking context
                              and no z-index needed.
                         </td>
 
@@ -298,7 +301,7 @@
                     </tr>
 
                     <tr>
-                        <th sope="row">
+                        <th scope="row">
                             Rounded surfaces
                             <code>.stroy-guide</code>,
                             <code>.feature-figure</code>,
