@@ -129,6 +129,40 @@
                             the title.
                         </td>
                     </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <code>.story-guide</code>
+                        </th>
+
+                        <td>
+                            In-page links that jump to each section of the story. 
+                        </td>
+
+                        <td>
+                            With no styling it's just a block of links above the article. 
+                        </td>
+
+                        <td>
+                            I will use <code>position:sticky</code> with <code>inset-block-star:var(--space-sm)</code> in the first grid column,
+                             plus<code>align-self:start</code> so it has room to travel. I'm picking sticky over fixed so it can't leave its section. 
+                        </td>
+
+                        <td>
+                            I will wrap the guide and article in <code>.story-layout</code> so the guide stops when the artcle ends and never slides
+                            over the documentation section. <code>z-index:var(--layer-sticky)</code> will give it its own stacking context.
+                        </td>
+
+                        <td>
+                            It will only stick when the screen is at least 52rem wide and 32rem tall. Smaller or zoomed-in screens get a normal list
+                            so every link stays reachable.
+                        </td>
+
+                        <td>
+                            I will scroll top to bottom at 1280px. It should stick at the start, stop at the end of the article, and never cover the 
+                            documentaion. I will click and tab through ever link and inspect the stacking context in DevTools.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             </div>
