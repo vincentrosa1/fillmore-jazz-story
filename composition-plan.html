@@ -94,6 +94,41 @@
                             not be covered, and move focus to the article.
                         </td>
                     </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <code>.issue-badge</code>
+                        </th>
+
+                        <td>
+                            A small "1940s - 1960s" tag that dates the story at a glance. The lede will say the same thing, 
+                            so nothing is lost if the badge is missed. 
+                        </td>
+
+                        <td>
+                            With no styling it's just a line of text right after the lede. 
+                        </td>
+
+                        <td>
+                            I will use <code>position:absolute</code> with <code>inset-block-start</code> and <code>inset-inline-end</code>
+                             to pin it to the header's top corner no matter how long the title is. I will add inline-end padding to the 
+                             header so the title never runs under it.
+                        </td>
+
+                        <td>
+                            The header will be <code>position:relative</code>, so it's the containing block. I won't give the badge a z-index,
+                             so it doesn't make a new stacking context. It will still paint above the header text because it's positioned. 
+                        </td>
+
+                        <td>
+                            Under 52rem I will turn the positioning off and it will sit in normal flow under the lede. 
+                        </td>
+
+                        <td>
+                            I will check 320px, 768px, and 1280px, long title, and 200% zoom. The badge should never overlap the eyebrow or 
+                            the title.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             </div>
