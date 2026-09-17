@@ -169,7 +169,8 @@
                         </th>
 
                         <td>
-                            An original illustration of a Fillmore club street at night that sets the mood. The caption holds the credit.
+                            A 1942 photograph of Buchanan Street from Post Street, taken weeks before the removal changed who lived in the neighborhood.
+                            The caption carries the credit and a link to the archive.
                         </td>
 
                         <td>
@@ -177,22 +178,22 @@
                         </td>
 
                         <td>
-                            I will use <code>clip-path:polygon()</code> to angle the corners like a torn gig poster. I will keep the important parts
-                            of the illustration away from the edges so nothing meaningful gets cut off. 
+                            I will use <code>clip-path:polygon()</code> to angle the corners like a torn gig poster. The trim is presentational: no more than about
+                            4% off any corner, and only sky and pavenement, never a building, sign, or person. The photo file itself is unaltered.
                         </td>
 
                         <td>
                             The clip uses the image's own border box. <code>clip-path</code> will make a stacking context on the image only, so it won't
-                            a z-index.
+                            need a z-index.
                         </td>
 
                         <td>
-                            I will wrap it in <code>@supports</code>, so browsers without support show the full rectangle. The caption sits outside the
-                            clipped image, so it never gets cut.
+                            I will wrap it in <code>@supports</code>, so browsers without support show the full rectangle. The fallback is the complete photo,
+                            and the caption sits outside the clipped image.
                         </td>
 
                         <td>
-                            I will turn <code>clip-path</code> off in DevTools and forim the image and caption are still complete. I will also inspect the stacking cocntext.
+                            I will turn <code>clip-path</code> off in DevTools and confirm the image and caption are still complete. I will also inspect the stacking context.
                         </td>
                     </tr>
 
