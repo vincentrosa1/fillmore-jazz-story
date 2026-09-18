@@ -363,3 +363,24 @@ article section {
         display: inline-block;
         padding-block: var(--space-2xs);
 }
+
+
+/* === PREFERENCES === */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media print {
+    .skip-link, .story-guide {
+        display: none;
+    }
+    .feature-header {
+        color: var(--ink-900);
+        background: var(--white);
+    }
+    .pull-quote {
+        margin-block-start: var(--space-lg);
+    }
+}
