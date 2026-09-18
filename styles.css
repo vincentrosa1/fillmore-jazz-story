@@ -60,7 +60,7 @@ body { overflow-wrap: break-word; }
     --weight-regular: 400;
     --weight-bold: 700;
 
-    --step-1: clamp(0.85rem, 0.82rem + 0.15vw, 0.94rem);
+    --step--1: clamp(0.85rem, 0.82rem + 0.15vw, 0.94rem);
     --step-0: var(--text-base);
     --step-1: clamp(1.20rem, 1.13rem + 0.35vw, 1.40rem);
     --step-2: clamp(1.50rem, 1.35rem + 0.70vw, 1.95rem);
@@ -114,13 +114,13 @@ p {
 }
 
 figcaption {
-    font-size: var(--step-1);
+    font-size: var(--step--1);
     color: var(--color-muted);
     max-width: var(--measure);
 }
 
 blockquote footer {
-    font-size: var(--step-1);
+    font-size: var(--step--1);
     color: var(--color-muted);
 }
 
@@ -186,7 +186,7 @@ article section {
     border-radius: var(--radius-sm);
     background: var(--color-accent);
     color: var(--ink-900);
-    font-size: var(--step-1);
+    font-size: var(--step--1);
     font-weight: var(--weight-bold);
 }
 
@@ -226,7 +226,7 @@ article section {
     outline-offset: 0.2rem;
 }
 
-.feature-header: focus-visible {
+.feature-header  :focus-visible {
     outline-color: var(--color-surface);
 }
 
@@ -348,7 +348,7 @@ article section {
 }
 
 /* === DOCUMENTATION === */
-.doumentation {
+.documentation {
     padding: var(--space-lg);
     border-radius: var(--radius-md);
     background: var(--color-surface);
