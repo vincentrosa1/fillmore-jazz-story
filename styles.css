@@ -60,7 +60,7 @@ body { overflow-wrap: break-word; }
     --weight-regular: 400;
     --weight-bold: 700;
 
-    --step--1: clamp(0.85rem, 0.82rem + 0.15vw, 0.94rem);
+    --step-1: clamp(0.85rem, 0.82rem + 0.15vw, 0.94rem);
     --step-0: var(--text-base);
     --step-1: clamp(1.20rem, 1.13rem + 0.35vw, 1.40rem);
     --step-2: clamp(1.50rem, 1.35rem + 0.70vw, 1.95rem);
@@ -103,7 +103,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     margin-bottom: var(--space-2xs);
 }
 
@@ -114,13 +114,13 @@ p {
 }
 
 figcaption {
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     color: var(--color-muted);
     max-width: var(--measure);
 }
 
 blockquote footer {
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     color: var(--color-muted);
 }
 
@@ -226,7 +226,7 @@ article section {
     outline-offset: 0.2rem;
 }
 
-.feature-header:focus-visible {
+.feature-header: focus-visible {
     outline-color: var(--color-surface);
 }
 
@@ -240,7 +240,7 @@ article section {
 }
 
 .story-guide h2 {
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     margin-bottom: var(--space-2xs);
 }
 
@@ -250,9 +250,36 @@ article section {
 }
 
 @media (min-width: 52rem) and (min-height: 32rem) {
-    .stroy-guide {
+    .story-guide {
         position: sticky;
         inset-block-start: var(--space-sm);
         z-index: var(--layer-sticky);
+    }
+}
+
+/* === FIGURE === */
+.feature-figure {
+    margin-block: var(--space-lg);
+    padding: var(--space-sm);
+    padding-block-end: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.feature-figure img {
+    margin-block-end: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+@supports (clip-path: polygon(0 0)) {
+    .feature-figure img {
+        clip-path: polygon(
+            0 3%, 
+            96% 0, 
+            100% 98%,
+            4% 100%
+        );
+        border-radius: 0;
     }
 }
