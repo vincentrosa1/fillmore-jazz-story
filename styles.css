@@ -283,3 +283,66 @@ article section {
         border-radius: 0;
     }
 }
+
+/* === PULL QUOTE === */
+.pull-quote {
+    position: relative;
+    margin-block: var(--space-lg);
+    padding: var(--space-md);
+    padding-inline-start: var(--space-xl);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border-inline-start: 0.25rem solid var(--color-accent);
+    font-size: var(--step-1);
+}
+
+.pull-quote p {
+    position: relative;
+    z-index: var(--layer-raised);
+    margin-bottom: var(--space-2xs);
+}
+
+.pull-quote footer {
+    position: relative;
+    z-index: var(--layer-raised);
+}
+
+.pull-quote::before {
+    content: "";
+    position: absolute;
+    inset-block-start: -0.3rem;
+    inset-inline-start: 0.1rem;
+    z-index: -1;
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--color-accent);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+@media (min-width: 52rem) {
+    .pull-quote {
+        margin-block-start: calc(var(--space-xl) * -1.5);
+        z-index: var(--layer-raised);
+    }
+}
+
+
+/* === SHAPE RECORD === */
+.shape-record {
+    width: min(45%, 12rem);
+    height: auto;
+    margin-block: var(--space-xs);
+    margin-inline-end: var(--space-md);
+}
+
+@supports (shape-outside: circle(50%)) {
+    @media (min-width: 30rem) {
+        .shape-record {
+            float: inline-start;
+            shape-outside: circle(50%);
+            shape-margin: var(--space-sm);
+            margin-inline-start: 0;
+        }
+    }
+}
