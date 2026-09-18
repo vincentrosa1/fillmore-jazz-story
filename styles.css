@@ -341,7 +341,7 @@ article section {
         .shape-record {
             float: inline-start;
             shape-outside: circle(50%);
-            shape-margin: var(--space-sm);
+            shape-margin: var(--space-2xs);
             margin-inline-start: 0;
         }
     }
